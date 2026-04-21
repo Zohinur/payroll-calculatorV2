@@ -6,9 +6,13 @@ public class Employee {
     private double hoursWorked;
     private double payRate;
 
-    public Employee() {
-
+    public Employee( int id, double hoursWorked, String name, double payRate) {
+        this.payRate = payRate;
+        this.hoursWorked = hoursWorked;
+        this.name = name;
+        this.id = id;
     }
+
     public int getId(){
         return id;
     }
