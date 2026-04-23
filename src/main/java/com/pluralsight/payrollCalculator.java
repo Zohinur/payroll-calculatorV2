@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 import java.io.*;
+import java.util.HashMap;
 
 public class payrollCalculator {
     public static void main(String[] args) {
@@ -42,6 +43,13 @@ public class payrollCalculator {
         //Using a for loop to print out the result
         for (Employee e : arrayE) {
             System.out.printf("%s,ID- %d Gross pay: %.2f  \n", e.getName(), e.getId(), e.getGrossPay());
+
         }
+        HashMap<Integer, Employee> employeeE = new HashMap<Integer, Employee>();
+        for (Employee e : arrayE) {
+            employeeE.put(e.getId(), e);
+        }
+        Employee foundEmployee = employeeE.get(70);
+        System.out.println("Employee with id 70: " + foundEmployee.getName());
     }
 }
